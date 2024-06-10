@@ -1,0 +1,1487 @@
+<html>
+<head>
+<title>Mercweb</title>
+<link href="https://uspdigital.usp.br/comumwebdev/libs/usp/main/1.0/menuweb.css"
+	type=text/css rel=stylesheet>
+</head>
+<style>
+#layout_principal {
+	width: 100%;
+}
+
+#layout_cabecalho {
+
+}
+
+#layout_menu {
+	width: 170px;
+	float: left;
+	padding-top: 10px;
+}
+
+#layout_conteudo {
+	padding-left: 181px;
+	padding-top: 10px;
+}
+</style>
+<body>
+
+	<div id="layout_principal">
+		<div id="layout_cabecalho">
+			<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+		<div id="layout_menu">
+
+
+
+	
+
+<!-- FreeStyle Menu v1.0RC by Angus Turnbull http://www.twinhelix.com -->
+<script type="text/javascript"
+	src="https://uspdigital.usp.br/comumwebdev/libs/javascript/fsmenu/1.0RC/fsmenu.js"></script>
+
+<!-- Demo CSS layouts for the list menu. Pick your favourite one and customise! -->
+<!-- Remove all but one and change "alternate stylesheet" to "stylesheet" to enable -->
+<link rel="stylesheet" type="text/css" id="listmenu-v"
+	href="https://uspdigital.usp.br/comumwebdev/libs/javascript/fsmenu/1.0RC/listmenu_v.css"
+	title="Vertical 'Earth'" />
+
+<!-- Fallback CSS menu file allows list menu operation when JS is disabled. -->
+<!-- This is automatically disabled via its ID when the script kicks in. -->
+<link rel="stylesheet" type="text/css" id="fsmenu-fallback"
+	href="https://uspdigital.usp.br/comumwebdev/libs/javascript/fsmenu/1.0RC/listmenu_fallback.css" />
+
+
+<script type="text/javascript">
+	//<![CDATA[
+
+	var arrow = null;
+	if (document.createElement && document.documentElement) {
+		//arrow = document.createElement('span');
+		//arrow.appendChild(document.createTextNode('>'));
+		// Feel free to replace the above two lines with these for a small arrow image...
+		arrow = document.createElement('img');
+		arrow.src = 'https://uspdigital.usp.br/comumwebdev/imagens/icones/11/arrow_sub1.gif';
+		arrow.style.borderWidth = '0';
+		arrow.className = 'subind';
+	}
+
+	if ("[{codmnu=281, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Sistemas USP, nomobtweb=index.html, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=https://uspdigital.usp.br, numnivhie=1, linmnu=https://uspdigital.usp.br/index.html}, {codmnu=9167, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Sistema Administrativo, nomobtweb=webLogin.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=/administrativo, numnivhie=1, linmnu=/administrativo/webLogin.jsp}, {codmnu=10435, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Receitas - COVID19, nomobtweb=merReceitaRelatorioCOVID19.jsp, pmeobtweb=null, dscmnu=Mostra os recolhimentos efetuados a partir das fontes vinculadas à COVID-19., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merReceitaRelatorioCOVID19.jsp?codmnu=10435}, {codmnu=10436, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Despesas - COVID19, nomobtweb=merDespesasRelatorioCOVID19.jsp, pmeobtweb=null, dscmnu=Mostra as despesas efetuadas com embasamento legal relativo à COVID-19., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merDespesasRelatorioCOVID19.jsp?codmnu=10436}, {codmnu=195, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Licitações, nomobtweb=listarLicEditalAberto, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=listarLicEditalAberto?codmnu=195}, {codmnu=366, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Legislação, nomobtweb=legislacao, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=http://www.usp.br/df2/?q=node/17, numnivhie=1, linmnu=http://www.usp.br/df2/?q=node/17/legislacao}, {codmnu=196, codgrpweb=4, nomgrpweb=Acesso Público, stapai=S, stavrfnivseg=S, elmmnu=Patrimônio, nomobtweb=aiPatrimonio.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=aiPatrimonio.jsp?codmnu=196}, {codmnu=248, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Buscar, nomobtweb=aiPatrimonio.jsp, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=aiPatrimonio.jsp?codmnu=248}, {codmnu=246, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Disponíveis, nomobtweb=PatrimonioCampusUnidadeListar, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=PatrimonioCampusUnidadeListar?codmnu=246}, {codmnu=247, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Responsável, nomobtweb=aiResponsavel.jsp, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=aiResponsavel.jsp?codmnu=247}, {codmnu=197, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Acompanhar Boleto, nomobtweb=merBoletoBancarioAcompanhar.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merBoletoBancarioAcompanhar.jsp?codmnu=197}, {codmnu=4133, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Cursos / e_Convênios, nomobtweb=dwrConveniosPublicosListar.jsp, pmeobtweb=null, dscmnu=Consultar Convênios, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=dwrConveniosPublicosListar.jsp?codmnu=4133}, {codmnu=9502, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Pagamentos Fornecedores, nomobtweb=merPagamentosFornecedorListar.jsp, pmeobtweb=null, dscmnu=Lista as liquidações pagas ou a serem pagas num determinado período., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merPagamentosFornecedorListar.jsp?codmnu=9502}, {codmnu=10198, codgrpweb=5, nomgrpweb=MercúrioWeb, stapai=N, stavrfnivseg=N, elmmnu=Recibo de Pagamento de Serviços, nomobtweb=merDirfGfipReciboBeneficiario.jsp, pmeobtweb=null, dscmnu=Consultar Recibos de Pagamento de Serviços do beneficiário., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merDirfGfipReciboBeneficiario.jsp?codmnu=10198}]" != null && "[{codmnu=281, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Sistemas USP, nomobtweb=index.html, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=https://uspdigital.usp.br, numnivhie=1, linmnu=https://uspdigital.usp.br/index.html}, {codmnu=9167, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Sistema Administrativo, nomobtweb=webLogin.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=/administrativo, numnivhie=1, linmnu=/administrativo/webLogin.jsp}, {codmnu=10435, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Receitas - COVID19, nomobtweb=merReceitaRelatorioCOVID19.jsp, pmeobtweb=null, dscmnu=Mostra os recolhimentos efetuados a partir das fontes vinculadas à COVID-19., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merReceitaRelatorioCOVID19.jsp?codmnu=10435}, {codmnu=10436, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Despesas - COVID19, nomobtweb=merDespesasRelatorioCOVID19.jsp, pmeobtweb=null, dscmnu=Mostra as despesas efetuadas com embasamento legal relativo à COVID-19., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merDespesasRelatorioCOVID19.jsp?codmnu=10436}, {codmnu=195, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Licitações, nomobtweb=listarLicEditalAberto, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=listarLicEditalAberto?codmnu=195}, {codmnu=366, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Legislação, nomobtweb=legislacao, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=http://www.usp.br/df2/?q=node/17, numnivhie=1, linmnu=http://www.usp.br/df2/?q=node/17/legislacao}, {codmnu=196, codgrpweb=4, nomgrpweb=Acesso Público, stapai=S, stavrfnivseg=S, elmmnu=Patrimônio, nomobtweb=aiPatrimonio.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=aiPatrimonio.jsp?codmnu=196}, {codmnu=248, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Buscar, nomobtweb=aiPatrimonio.jsp, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=aiPatrimonio.jsp?codmnu=248}, {codmnu=246, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Disponíveis, nomobtweb=PatrimonioCampusUnidadeListar, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=PatrimonioCampusUnidadeListar?codmnu=246}, {codmnu=247, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Responsável, nomobtweb=aiResponsavel.jsp, pmeobtweb=null, dscmnu=null, codmnupai=196, staabt=N, urlsie=null, numnivhie=2, linmnu=aiResponsavel.jsp?codmnu=247}, {codmnu=197, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=S, elmmnu=Acompanhar Boleto, nomobtweb=merBoletoBancarioAcompanhar.jsp, pmeobtweb=null, dscmnu=null, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merBoletoBancarioAcompanhar.jsp?codmnu=197}, {codmnu=4133, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Cursos / e_Convênios, nomobtweb=dwrConveniosPublicosListar.jsp, pmeobtweb=null, dscmnu=Consultar Convênios, codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=dwrConveniosPublicosListar.jsp?codmnu=4133}, {codmnu=9502, codgrpweb=4, nomgrpweb=Acesso Público, stapai=N, stavrfnivseg=N, elmmnu=Pagamentos Fornecedores, nomobtweb=merPagamentosFornecedorListar.jsp, pmeobtweb=null, dscmnu=Lista as liquidações pagas ou a serem pagas num determinado período., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merPagamentosFornecedorListar.jsp?codmnu=9502}, {codmnu=10198, codgrpweb=5, nomgrpweb=MercúrioWeb, stapai=N, stavrfnivseg=N, elmmnu=Recibo de Pagamento de Serviços, nomobtweb=merDirfGfipReciboBeneficiario.jsp, pmeobtweb=null, dscmnu=Consultar Recibos de Pagamento de Serviços do beneficiário., codmnupai=null, staabt=N, urlsie=null, numnivhie=1, linmnu=merDirfGfipReciboBeneficiario.jsp?codmnu=10198}]" != '') {
+		// Here's a menu object to control the above list of menu data:
+		var listMenu = new FSMenu('listMenu', true, 'display', 'block', 'none');
+		listMenu.hideDelay = 800;
+		//listMenu.showDelay = 0;
+		//listMenu.switchDelay = 125;
+		//listMenu.cssLitClass = 'highlighted';
+		//listMenu.showOnClick = 0;
+		listMenu.hideOnClick = true;
+		listMenu.animInSpeed = 0.5;
+		listMenu.animOutSpeed = 0.5;
+		listMenu.animations[listMenu.animations.length] = FSMenu.animFade;
+		listMenu.animations[listMenu.animations.length] = FSMenu.animSwipeDown;
+		addReadyEvent(new Function(
+				'listMenu.activateMenu("listMenuRoot", arrow)'));
+	}
+
+	if ("true" != "false") {
+		var listMenu2 = new FSMenu('listMenu2', true, 'display', 'block',
+				'none');
+		listMenu2.hideDelay = 800;
+		listMenu2.hideOnClick = true;
+		listMenu2.animInSpeed = 0.5;
+		listMenu2.animOutSpeed = 0.5;
+		listMenu2.animations[listMenu2.animations.length] = FSMenu.animFade;
+		listMenu2.animations[listMenu2.animations.length] = FSMenu.animSwipeDown;
+		addReadyEvent(new Function(
+				'listMenu2.activateMenu("listMenuRoot2", arrow)'));
+	} else {
+		var listMenu3 = new FSMenu('listMenu3', true, 'display', 'block',
+				'none');
+		listMenu3.hideDelay = 800;
+		listMenu3.hideOnClick = true;
+		listMenu3.animInSpeed = 0.5;
+		listMenu3.animOutSpeed = 0.5;
+		listMenu3.animations[listMenu3.animations.length] = FSMenu.animFade;
+		listMenu3.animations[listMenu3.animations.length] = FSMenu.animSwipeDown;
+		addReadyEvent(new Function(
+				'listMenu3.activateMenu("listMenuRoot3", arrow)'));
+	}
+	//]]>
+</script>
+
+<!-- PUBLICO -->
+
+	
+	<ul class="menulist" id="listMenuRoot">
+		
+			
+				<li class="menuHeader">Acesso Público</li>
+			
+			
+
+	<li><a href='https://uspdigital.usp.br/index.html'
+		title=''>Sistemas USP</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='/administrativo/webLogin.jsp'
+		title=''>Sistema Administrativo</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='merReceitaRelatorioCOVID19.jsp?codmnu=10435'
+		title='Mostra os recolhimentos efetuados a partir das fontes vinculadas à COVID-19.'>Receitas - COVID19</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='merDespesasRelatorioCOVID19.jsp?codmnu=10436'
+		title='Mostra as despesas efetuadas com embasamento legal relativo à COVID-19.'>Despesas - COVID19</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='listarLicEditalAberto?codmnu=195'
+		title=''>Licitações</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='http://www.usp.br/df2/?q=node/17/legislacao'
+		title=''>Legislação</a></li>
+
+
+
+
+
+			
+			
+
+
+	<li><a href='#' title=''><span>Patrimônio</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+	<li><a href='aiPatrimonio.jsp?codmnu=248'
+		title=''>Buscar</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='PatrimonioCampusUnidadeListar?codmnu=246'
+		title=''>Disponíveis</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='aiResponsavel.jsp?codmnu=247'
+		title=''>Responsável</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+	<li><a href='merBoletoBancarioAcompanhar.jsp?codmnu=197'
+		title=''>Acompanhar Boleto</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='dwrConveniosPublicosListar.jsp?codmnu=4133'
+		title='Consultar Convênios'>Cursos / e_Convênios</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='merPagamentosFornecedorListar.jsp?codmnu=9502'
+		title='Lista as liquidações pagas ou a serem pagas num determinado período.'>Pagamentos Fornecedores</a></li>
+
+
+
+
+
+			
+			
+
+	<li><a href='merDirfGfipReciboBeneficiario.jsp?codmnu=10198'
+		title='Consultar Recibos de Pagamento de Serviços do beneficiário.'>Recibo de Pagamento de Serviços</a></li>
+
+
+
+	
+		</ul>
+		</li>
+	
+
+
+
+</ul>
+<div style="font-size: 7px">&nbsp;</div>
+
+
+
+<!-- NAO AUTENTICADO -->
+
+
+<!-- AUTENTICADO -->
+
+	
+	<ul class="menulist" id="listMenuRoot2">
+		
+			
+				<li class="menuHeader">MercúrioWeb</li>
+				
+				<li><a
+					href='avisoWebObter?codmnu=0'>Página
+						Inicial</a></li>
+				
+				<li><a href='webMenuMapa.jsp?codmnu=0'>Mapa do Site</a></li>
+				
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=282'
+		title='Cadastrar usuários e autorizações'><span>Usuário</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=941'
+		title=''><span>Procuração</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='ProcuracaoListar?codmnu=2868'
+		title='Delega autorização para um outro usuário.'>Cadastrar</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merUsuarioProcuracaoConsulta.jsp?codmnu=2869'
+		title='Consulta procurações em que o usuário ou o servidor informado é outorgante e/ou outorgado.'>Consultar</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=756'
+		title=''><span>Fale Conosco</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='faleConosco?codmnu=757'
+		title='Envia uma mensagem para o Fale Conosco'>Enviar Mensagem</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='faleConoscoBuscar?codmnu=758'
+		title='Gerencia as mensagens enviadas pelos usuários ao Fale Conosco'>Buscar Mensagens</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='faleConoscoGrupoTrabalhoListar?codmnu=759'
+		title='Gerencia os grupos de trabalho, assuntos e membros do Fale Conosco'>Grupos de Trabalho</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=202'
+		title='Solicitação e Prestação de Contas de Adiantamento.'><span>Adiantamento</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiantamentoSolicitacaoFormInserir?codmnu=340'
+		title='Cadastra nova Solicitação de Adiantamento'>Nova Solicitação</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='dwrAdiantamentoSolicitacaoListarMinhas.jsp?codmnu=3430'
+		title='Lista Solicitações de Adiantamento autorizadas ao usuário para alteração e encaminhamento.'>Minhas Solicitações</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='dwrPrestContasAdiListarMinhas.jsp?codmnu=269'
+		title='Lista Adiantamentos com finalidade de cadastro e encaminhamento da Prestação de Contas até seu abono'>Prestar Contas</a></li>
+
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=367'
+		title=''><span>Relatórios</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiantamentoSolicitacaoBuscar?t=imp&amp;codmnu=368'
+		title='Consulta Solicitações de Adiantamento e prepara para impressão.'>Consulta Solicitações</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPrestacaoContasAdiantamentoListar.jsp?codmnu=3050'
+		title='Pesquisa Adiantamentos com opções de pesquisa: unidade de despesa, data do empenhamento, responsável ou processo'>Consulta Adiantamentos</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPrestacaoContasAdiCnpjListar.jsp?codmnu=3939'
+		title='Consulta Fornecedor Pago por Adiantamento. Permite visualizar documentos da Prestação de Contas.'>Consulta Fornecedor Pago por Adiantamento</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiantamentoPrestContasBuscar?codmnu=369'
+		title='Prepara para impressão Documentos da Prestação Contas de Adiantamento.'>Documentos Prestação de Contas</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiantamentoSolicitacaoBuscar?t=extrato&amp;codmnu=370'
+		title='Consulta Extrato das Movimentações .'>Extrato</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiantamentoItemDespesaListar?codmnu=371'
+		title=''>Itens Despesa</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='adiformAutorizarDebitoAutomatico?codmnu=2468'
+		title='Emite formulário de autorização de Débito Automático.'>Formulário Débito Automático</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=298'
+		title=''><span>Ajuda</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='http://www.usp.br/df2/?q=node/17/legislacao'
+		title='Mostra a Legislação vigente referente a Adiantamentos'>Legislação</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=227'
+		title=''><span>Almoxarifado</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=199'
+		title=''><span>Requisição</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admAlmoxMinhaRequisicaoListar&amp;codmnu=10642&amp;codmnu=256'
+		title='Requisição de Almoxarifado'>Nova Requisição</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admAlmoxMinhaRequisicaoListar&amp;codmnu=10642&amp;codmnu=296'
+		title='Requisição de Almoxarifado em Esboço.'>Minhas Requisições</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merReqAlmoxCarregar.jsp?codmnu=335'
+		title='Gera requisições a partir de dados obtidos de um arquivo especificado.'>Carregar Arquivo</a></li>
+
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=258'
+		title=''><span>Consultar</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='buscarRequisicoesAlmox?codmnu=259'
+		title='Lista Requisições de Almoxarifado'>Requisições</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merReqAlmoxCatalogoUni?codmnu=260'
+		title='Lista bens em estoque da unidade informando suas características e preço médio.'>Catálogo Unidade</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merItemBemBusca?m=est&amp;codmnu=261'
+		title='Lista os materiais e os bens associados.'>Bens em Estoque</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=198'
+		title='Compreende todos os tipos de requisição.'><span>Compra</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=200'
+		title=''><span>Requisição</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merRequisicaoCompraListar.jsp?codmnu=3852'
+		title=''>Consultar Requisições</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admCompraRequisicaoListar?acao=novarequisicao&amp;codmnu=262'
+		title='Requisição de Compra.'>Nova Requisição</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admCompraRequisicaoListar?acao=minhasrequisicoes&amp;codmnu=297'
+		title='Requisição de Compra em Elaboração'>Minhas Requisições</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merReqCompraCarregar.jsp?codmnu=363'
+		title='Gera requisições de compra a partir de dados obtidos de um arquivo especificado.'>Carregar Arquivo</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=264'
+		title=''><span>Consultas</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merReqCompraCatalogo.jsp?codmnu=266'
+		title='Mostra os  materiais e sua descrição.'>Catálogo Materiais</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merItemBemBusca?m=mat&amp;mostrarLinkCodigoBem=false&amp;codmnu=339'
+		title='Lista os materiais, sua definição e os bens associados.'>Bens Materiais</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merFornecedorBuscaAvancada.jsp?codmnu=2948'
+		title='Busca avançada de fornecedores.'>Fornecedor</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=201'
+		title=''><span>Diárias</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='solicitarDiarias?codmnu=267'
+		title='Cadastro de uma solicitação de diária.'>Nova Diária</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='abrirConsultaDiarias?codmnu=268'
+		title='Mostra as diárias em andamento.'>Minhas Diárias</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merDiariaRelatorioDWR.jsp?codmnu=2613'
+		title='Relatórios do sistema Diárias'>Relatórios</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=205'
+		title=''><span>Execução Orçamentária</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='formInicioRelOrcamento?codmnu=4387'
+		title='Relatórios referentes a operações de Execução orçamentária.'>Relatórios</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=223'
+		title=''><span>Patrimônio</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admPatrimonioInventarioListar&amp;codmnu=11016'
+		title=''>Inventário</a></li>
+
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=225'
+		title=''><span>Bens</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioListar.jsp?codmnu=2421'
+		title='Gerencia o patrimônio em relação a dados de localização física, centro de despesa, responsabilidade, situação e condição.'>Gerenciar</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='bemPatrimoniadoGerenteBuscar?codmnu=342'
+		title='Quadro geral de bem patrimoniado na unidade de despesa'>Quadro Geral</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioListar.jsp?tipo=proprios&amp;codmnu=375'
+		title='Atualizar bens sob sua responsabilidade'>Próprios</a></li>
+
+
+
+
+
+			
+			
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=343'
+		title=''><span>Solicitar Regularização</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioRelacionar.jsp?codmnu=587'
+		title='Solicitação / Acompanhamento de regularização patrimonial.'>Cadastrar</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioRelacionarListar.jsp?codmnu=588'
+		title='Relacionar bens a serem patrimoniados'>Consultar</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+	
+	<li><a href='webSistemaAdministrativo.jsp?p=admPatrimonioTransfSolicitacaoListar?tipo=P&amp;codmnu=9822'
+		title=''>Solicitar Transferência</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='bemTransfBaixaEntrada?codmnu=328'
+		title='Permite alterar o tipo de baixa de inservível para CEDIR para os bens do grupo de informática.'>Alterar Baixa Cedir</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioAjuda.jsp?codmnu=3426'
+		title='Manuais para utilização do sistema'>Ajuda</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=6585'
+		title=''><span>Animal</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioAnimalListar.jsp?tipo=proprios&amp;codmnu=6587'
+		title='Gerenciamento de patrimônio animal sob sua responsabilidade'>Próprios</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioAnimalCarregarArquivoAlterar.jsp?codmnu=10788'
+		title=''>Alteração em Lote (Carregar Arquivo)</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=365'
+		title=''><span>Localização Física</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='localUspFormInserir?codmnu=585'
+		title='Cadastrar Localização Física'>Cadastrar</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='localUspBuscar?codmnu=586'
+		title='Relação de Locais USP'>Consultar</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+	
+	<li><a href='merPatrimonioTermoListar.jsp?codmnu=8173'
+		title=''>Termos de Permissão de Uso</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merPatrimonioAjuda.jsp?codmnu=2969'
+		title='Manuais para utilização do sistema'>Ajuda</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+
+	
+	<li><a
+		href='webMenuNavegacao.jsp?codmnu=1244'
+		title='Criar uma solicitação no cadastro de material/bem.'><span>Solicitar Cadastro Material</span></a>
+		<ul>
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merBemSolicitacaoCadastro.jsp?codmnu=1245'
+		title='Solicitar cadastro de bens/itens.'>Bem / Item</a></li>
+
+
+
+
+
+			
+			
+
+
+
+	
+	<li><a href='merMaterialSolicitacaoCadastro.jsp?codmnu=1246'
+		title='Solicitar cadastro de materiais.'>Material</a></li>
+
+
+
+
+
+			
+			
+				
+	</ul>
+	</li>
+	
+
+
+
+
+	
+	<li><a href='relatorioMenu?codmnu=244'
+		title=''>Relatórios</a></li>
+
+
+
+
+
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		</div>
+
+		<div id="layout_conteudo">
+			
+
+			
+
+			
+			
+				
+			
+
+			
+				
+<html>
+<head>
+
+	
+
+
+
+
+
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/validationEngine/2.6.4/jquery.validationEngine-pt_BR.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/validationEngine/2.6.4/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/blockUI/2.57/jquery.blockUI.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/jqGrid/4.13.1/grid.locale-pt-br.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/jqGrid/4.13.1/jquery.jqgrid.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jqueryui/1.11.4/jquery.ui.datepicker-pt-BR.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jqueryui/addons/timepicker/1.5.0/jquery.ui.timepicker.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/mask/1.13.4/jquery.mask.min.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/usp/util/1.4/util.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/javascript/ckeditor/4.4.5/ckeditor.js"></script>
+<script type="text/javascript" src="https://uspdigital.usp.br/comumwebdev/libs/javascript/ckeditor/4.4.5/adapters/jquery.js"></script>
+<script type="text/javascript" src="/mercurioweb/dwr/engine.js"></script>
+<script type="text/javascript" src="/mercurioweb/dwr/util.js"></script>
+<script src="//uspdigital.usp.br/comumwebdev/libs/messages/1.3.0-0/messages.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/jqueryui/1.11.4/temas/ui-lightness/jquery-ui.min.css" />
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/jqueryui/addons/timepicker/1.5.0/jquery.ui.timepicker.css" />
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/validationEngine/2.6.4/jquery.validationEngine.css" />
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/jquery/plugins/jqGrid/4.13.1/ui.jqgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/mercurioweb/css/avisoweb/avisoweb.css">
+<style>
+a.link_cabecalho:active {
+	font-family: verdana;
+	font-size: 10px;
+	color: olive;
+	text-decoration: none
+}
+
+a.link_cabecalho:link {
+	font-family: verdana;
+	font-size: 10px;
+	color: olive;
+	text-decoration: none
+}
+
+a.link_cabecalho:visited {
+	font-family: verdana;
+	font-size: 10px;
+	color: olive;
+	text-decoration: none
+}
+
+a.link_cabecalho:hover {
+	font-family: verdana;
+	font-size: 10px;
+	color: gray;
+	text-decoration: underline
+}
+
+#my_web_cabecalho {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: left;
+	width: 90%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #666666;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+}
+
+#my_web_cabecalho_descricao {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding-bottom: 10px;
+}
+</style>
+</head>
+
+
+	
+
+
+
+
+<link type="text/css" rel="stylesheet" href="https://uspdigital.usp.br/comumwebdev/libs/usp/main/1.0/home.css"/>
+<table width="100%" border="0" cellspacing=" 0" cellpadding=" 0" align="center">
+  
+  <tr>
+    <td align="center"><font face="Arial, Helvetica, sans-serif" size="1"><hr size="1">
+      <a href='creditos.jsp' class="link_olive" target="_self">Cr&eacute;ditos</a>
+      | <a href="faleConosco" class="link_olive">Fale conosco</a><br>
+      &copy; 1999 - 2024 - Superintend&ecirc;ncia de Tecnologia da Informa&ccedil;&atilde;o/USP</font>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+			
+
+			
+		</div>
+	</div>	
+</body>
+</html>

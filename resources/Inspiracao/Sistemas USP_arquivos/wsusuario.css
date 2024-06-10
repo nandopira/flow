@@ -1,0 +1,118 @@
+/* Links */
+
+a.normal:active  {color: #0F94AB; text-decoration: none}
+a.normal:link    {color: #0F94AB; text-decoration: none}
+a.normal:visited {color: #0F94AB; text-decoration: none}
+a.normal:hover   {color: black; text-decoration: underline}
+
+/* Aplicados a todos objetos HTML */
+
+body{
+	
+}
+
+html,body,span,button,label,p,table,tr,td{
+	font-family: Verdana,"Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+
+input{
+	font-family: Arial,Verdana,Helvetica,sans-serif;	
+}
+
+hr{
+	color: Gray;
+	height: 1px;
+}
+
+li{
+	padding: 4px;
+	color: gray;
+}
+
+/* Opcionais */
+
+p.linha{
+	width: 95%;
+	color: #F26A1B;		
+	font-weight: bold;
+	text-align: left;	
+	padding-left: 8px;
+	padding-bottom: 3px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: lightgray;	
+}
+
+table.normal tr td {
+	border:0;
+}
+
+table.table_list {
+	border-collapse: collapse;	
+}
+
+table.table_list tr td {
+	border:1px solid #DCDCDC;
+	padding: 3px;
+}
+
+tr.table_list_header {
+	font-weight: bold;
+	color: Black;
+	background-color: #EFEFEF;
+	padding: 2px;
+}
+
+div.publico-item{
+	width: 23%;
+	float: left;	
+	margin-right: 2%;
+	margin-bottom: 5px;	
+}
+div.publico-item-primeiro {
+	margin-left: 0;
+	clear: left;
+}
+
+/* Layout */
+#web_cabecalho_titulo{
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	color: #F26A1B;
+	font-size: 16px;	
+	font-weight: bold;	
+	text-align:left;
+	width:90%;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-bottom-color:gray;
+	padding-bottom:4px;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+	
+#web_rodape_texto{
+	text-align:center;
+	width:100%;
+	border-top:solid;
+	border-top-width:1px;
+	border-top-color:gray;
+	padding-top:4px;
+	margin-top: 4px;
+	float: left;
+	margin-top: 20px;	
+	margin-bottom: 50px;	
+}
+
+#web_rodape_creditos{
+    padding-top: 5px;
+	text-align: center;
+	width: 100%;
+}
+
+#web_mensagem{
+    color: Maroon;   
+    text-align: center;
+}

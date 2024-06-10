@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin-right: 5px;
+        }
+        .tab-content {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .details, .phases {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="details">
+        <p>PROJECT NAME: Projeto X</p>
+        <p>STATUS: Em Dia</p>
+        <p>SUPERVISOR: João Silva</p>
+        <p>DEADLINE: 01/12/2023</p>
+    </div>
+
+    <div class="phases">
+        <p>FASE 01: 10%</p>
+        <p>FASE 02: 20%</p>
+        <p>FASE 03: 30%</p>
+        <p>FASE 04: 40%</p>
+    </div>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('financeira')">Financeira</div>
+        <div class="tab" onclick="showTab('atividades')">Atividades</div>
+        <div class="tab" onclick="showTab('reunioes')">Reuniões</div>
+    </div>
+
+    <div id="financeira" class="tab-content">
+        <p>FATURA: R$ 1000</p>
+        <p>PAGTO: 20/05/2023</p>
+        <p>FATURA: R$ 2000</p>
+        <p>PAGTO: 10/06/2023</p>
+    </div>
+
+    <div id="atividades" class="tab-content">
+        <p>ATIVIDADE 1: Descrição da atividade 1</p>
+        <p>ATIVIDADE 2: Descrição da atividade 2</p>
+    </div>
+
+    <div id="reunioes" class="tab-content">
+        <p>REUNIÃO 1: 15/05/2023</p>
+        <p>REUNIÃO 2: 25/05/2023</p>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        var contents = document.querySelectorAll('.tab-content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

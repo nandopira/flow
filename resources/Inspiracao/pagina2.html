@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Serviços Computacionais da USP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5F7FA;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background-color: #00B8E6;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 10px 0;
+        }
+        .sidebar li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #F9F9F9;
+        }
+        .login-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 20px 0;
+        }
+        .login-form h2 {
+            margin: 0 0 20px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00B8E6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #00B8E6;
+            text-decoration: none;
+        }
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:nth-child(1) {
+            background-color: #FFB400;
+            color: white;
+        }
+        .buttons button:nth-child(2) {
+            background-color: transparent;
+            color: #00B8E6;
+            border: 2px solid #00B8E6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="usp-logo.png" alt="USP Logo">
+        <input type="text" placeholder="Qual serviço você deseja utilizar?">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Graduação</a></li>
+                <li><a href="#">Pós-Graduação</a></li>
+                <li><a href="#">Pesquisa</a></li>
+                <li><a href="#">Cultura e Extensão</a></li>
+                <li><a href="#">Relações Internacionais</a></li>
+                <li><a href="#">Indicadores USP</a></li>
+                <li><a href="#">Administrativo</a></li>
+                <li><a href="#">Financeiro</a></li>
+                <li><a href="#">Bolsas e Benefícios</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Seja bem-vindo(a) ao Portal de Serviços Computacionais da USP!</h1>
+            <p>Com o Portal de Serviços Computacionais da USP, você pode acessar todos os serviços acadêmicos e administrativos oferecidos pela universidade de um jeito mais simples, rápido e intuitivo.</p>
+            <div class="buttons">
+                <button>Faça um tour pelo novo portal</button>
+                <button>Tire suas dúvidas</button>
+            </div>
+            <div class="login-form">
+                <h2>Login</h2>
+                <input type="text" placeholder="Número USP">
+                <input type="password" placeholder="Senha">
+                <button>Acessar minha conta</button>
+                <a href="#">Primeiro Acesso</a>
+                <a href="#">Esqueci minha senha</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

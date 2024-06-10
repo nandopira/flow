@@ -1,0 +1,260 @@
+<html><!--[if IE 8]>
+<script>
+	IECOOKIEBUG=true;
+</script
+<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><style>
+	a.cabecalho_sair:active  {font-family:verdana; font-weight:bold; color:#FFFFFF; text-decoration:none;}
+	a.cabecalho_sair:link    {font-family:verdana; font-weight:bold; color:#FFFFFF; text-decoration:none;}
+	a.cabecalho_sair:visited {font-family:verdana; font-weight:bold; color:#FFFFFF; text-decoration:none;}
+	a.cabecalho_sair:hover   {font-family:verdana; font-weight:bold; color:#FFFFFF; text-decoration:underline;}
+
+	td.font_cabecalho1 {
+		font:bold 26px Tahoma;
+		color: #FFFFFF;
+	}
+	td.font_cabecalho2 {
+		font:bold 10px Arial;
+		color: #FFFFFF;
+	}
+	td.font_cabecalho3 {
+		font:normal 9px Verdana;
+		color: #FFFFFF;
+	}
+</style>
+
+</head><body><table width="100%" height="60" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td width="180" rowspan="3" align="center">
+			<a href="http://www.usp.br/" target="_blank"><img src="Sistemas%20USP_arquivos/usp-logo.png" width="122" height="49" alt="" border="0" style="position: relative; top: -3px;"></a>
+		</td>
+		<td>
+			<a href="http://www.usp.br/" target="_blank"><img src="Sistemas%20USP_arquivos/usp-logo-texto.png" alt="" width="260" height="44" border="0" style="position: relative; top: 5px;"></a>
+		</td>
+		<td align="right" style="padding-right:20px;">
+			<a href="https://portalservicos.usp.br/" class="normal" style="font-size:14px; color:olive;"><strong>Tarefas pendentes</strong></a>
+		</td>
+	</tr>
+</tbody></table>
+<div style="width: 100%; height: 14px; background-image: url('https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/bg-headtop.gif'); margin-bottom: 5px; text-align: right; color: white; padding-top: 12px; padding-right: 3px; font-family: Verdana; font-size: 10px;">	
+</div>
+
+
+
+	
+
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.min.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery-ui.min.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.ui.datepicker-pt-BR.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.validationEngine-pt.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.validationEngine-pt.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="Sistemas%20USP_arquivos/engine.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/util.js"></script>
+
+<script type="text/javascript" src="Sistemas%20USP_arquivos/wsusuario.js"></script>
+<script type="text/javascript" src="Sistemas%20USP_arquivos/usp-exception-dwr.js"></script> 
+
+	
+	<title>Sistemas USP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+	<meta http-equiv="Expires" content="-1">
+
+	<link type="text/css" rel="stylesheet" href="Sistemas%20USP_arquivos/jquery.validationEngine.css">
+<link type="text/css" rel="stylesheet" href="Sistemas%20USP_arquivos/jquery-ui.css">
+<link type="text/css" rel="stylesheet" href="Sistemas%20USP_arquivos/wsusuario.css">		
+
+
+
+<div id="web_cabecalho_titulo">
+	Sistemas USP
+</div>
+
+<br>
+
+
+	
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="Sistemas%20USP_arquivos/js"></script>
+		
+		<script type="text/javascript" src="Sistemas%20USP_arquivos/UsuarioControleDWR.js"></script>
+		<script type="text/javascript" src="Sistemas%20USP_arquivos/index.js"></script>
+		<script type="text/javascript">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-2HQ3ZEYQNH');
+			
+			$(document).ready(function() {
+				iniciarForm();
+			});
+		</script>
+	
+
+	<div id="divLogin">
+		<form id="formLogin" onsubmit="return false;">
+			<label for="loginUsuario" id="labelUsuario" lang_en="User(USP Code):" lang_br="Usu�rio:">Usu�rio:</label><input type="text" id="loginUsuario" size="10" class="validate[required],minSize[3]" value="7023777">
+			<label for="senhaUsuario" id="labelSenha" lang_en="Password:" lang_br="Senha:">Senha:</label><input type="password" id="senhaUsuario" size="10" class="validate[required],minSize[8]">
+			<input type="submit" id="botaoLogin" lang_en="Login" lang_br="Entrar" value="Entrar">&nbsp;&nbsp; 
+			<a href="javascript:formPrimeiroAcesso()" class="normal" id="linkPrimeiroAcesso" lang_en="First Access" lang_br="Primeiro Acesso">Primeiro Acesso</a>
+			 | <a href="javascript:formEsqueciSenha()" class="normal" id="linkEsqueciSenha" lang_en="Forgot Password" lang_br="Esqueci a Senha">Esqueci a Senha</a>
+			 <!--| <a href='javascript:formAlterarSenhaPublico()' class="normal" lang_en="Change Password" lang_br="Alterar Senha">Alterar Senha</a>-->
+			 <!--| <a href='javascript:formCadastreSe()' class="normal" id="linkCadastreSe" lang_en="Sign Up" lang_br="Cadastre-se">Cadastre-se</a>-->
+			 | <a href="javascript:formAjuda()" class="normal" id="linkAjuda" lang_en="Help" lang_br="Ajuda">Ajuda</a>
+			 | <a href="javascript:idioma.trocar(idioma.lang_br)" class="normal"><img src="Sistemas%20USP_arquivos/flag_br.jpg" border="0" title="Portuguese"></a> <a href="javascript:idioma.trocar(idioma.lang_en)"><img src="Sistemas%20USP_arquivos/flag_en.gif" border="0" title="English"></a>
+		</form>
+	</div>
+
+	<div id="divAutenticado" style="display: none">
+		<span id="spanNomeUsuario"></span> <span id="spanEmailUsuario"></span>
+		<span id="spanAlterarUsuarioExterno"><a href="javascript:formAlterarUsuarioExterno()" class="normal" lang_en="My Account" lang_br="Minha Conta">Minha Conta</a> | </span>
+		<a href="javascript:formAlterarSenha()" class="normal" lang_en="Change Password" lang_br="Alterar Senha">Alterar Senha</a>
+		<span id="spanAlterarEmail"> | <a href="javascript:formAlterarEmail()" class="normal" lang_en="Change Email" lang_br="Alterar Email">Alterar Email</a></span>
+		| <a href="javascript:formAlterarContato()" class="normal" lang_en="Change contact details" lang_br="Alterar Dados de Contato">Alterar Dados de Contato</a>
+		| <a href="javascript:formSessao()" class="normal" lang_en="Manage Session" lang_br="Gerenciar Sess�o">Gerenciar Sess�o</a>
+		| <a href="https://uspdigital.usp.br/wsusuario/sair" class="normal" lang_en="Logout" lang_br="Sair">Sair</a>
+	</div>
+
+	<div id="divAviso">
+		
+
+
+
+
+	</div>
+	
+	<div id="divSistema"></div>
+
+	<div id="divSistemaOauth"></div>
+
+	<div id="divServico"></div>
+
+	<div id="divPublico">
+		<div class="publico-item-primeiro"></div>
+<div class="publico-item">
+	<p class="linha" lang_en="Undergraduate" lang_br="Gradua��o">Gradua��o</p>
+	<li><a href="https://uspdigital.usp.br/jupiterweb" target="_blank" class="normal" lang_en="J�piterWeb" lang_br="J�piterWeb">J�piterWeb</a></li>
+	<li><a href="https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D" target="_blank" class="normal" lang_en="Subjects" lang_br="Disciplinas">Disciplinas</a></li>
+	<li><a href="https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=T" target="_blank" class="normal" lang_en="Classes" lang_br="Turmas">Turmas</a></li>
+	<li><a href="https://uspdigital.usp.br/marteweb/processoFormListar?modo=N&amp;print=true" target="_blank" class="normal" lang_en="Internship Selection Process" lang_br="Processo Seletivo Est�gio">Processo Seletivo Est�gio</a></li>
+	<li><a href="http://alumni.usp.br/" target="_blank" class="normal" lang_en="Former Students (Alumni)" lang_br="Alumni USP (Ex-Alunos)">Alumni USP (Ex-Alunos)</a></li>
+	<li><a href="https://edisciplinas.usp.br/" target="_blank" class="normal" lang_en="e-Disciplinas" lang_br="e-Disciplinas">e-Disciplinas</a></li>
+</div>					
+
+<div class="publico-item">
+	<p class="linha" lang_en="Graduate" lang_br="P�s-Gradua��o">P�s-Gradua��o</p>
+	<li><a href="https://uspdigital.usp.br/janus" target="_blank" class="normal" lang_en="Janus" lang_br="Janus">Janus</a></li>	
+	<li><a href="https://uspdigital.usp.br/datausp" target="_blank" class="normal" lang_en="weR_USP-PosGrad" lang_br="weR_USP-PosGrad">weR_USP-PosGrad</a></li>	
+	<li><a href="https://uspdigital.usp.br/janus/componente/disciplinasOferecidasInicial.jsf" target="_blank" class="normal" lang_en="Subjects Offered" lang_br="Disciplinas Oferecidas">Disciplinas Oferecidas</a></li>	
+	<li><a href="https://uspdigital.usp.br/janus/componente/catalogoDisciplinasInicial.jsf" target="_blank" class="normal" lang_en="Catalog of Subjects" lang_br="Cat�logo de Disciplinas">Cat�logo de Disciplinas</a></li>
+	<li><a href="https://uspdigital.usp.br/janus/componente/orientadoresInicial.jsf" target="_blank" class="normal" lang_en="Supervisors" lang_br="Orientadores">Orientadores</a></li>
+	<li><a href="http://alumni.usp.br/" target="_blank" class="normal" lang_en="Former Students (Alumni)" lang_br="Alumni USP (Ex-Alunos)">Alumni USP (Ex-Alunos)</a></li>
+	<li><a href="https://edisciplinas.usp.br/" target="_blank" class="normal" lang_en="e-Disciplinas" lang_br="e-Disciplinas">e-Disciplinas</a></li>	
+</div>					
+
+<div class="publico-item">
+	<p class="linha" lang_en="Culture and Extension" lang_br="Cultura e Extens�o">Cultura e Extens�o</p>
+	<li><a href="https://uspdigital.usp.br/apolo" target="_blank" class="normal" lang_en="Apolo" lang_br="Apolo">Apolo</a></li>	
+	<li><a href="https://uspdigital.usp.br/apolo/beneficioAprenderCulturaExtensaoOferecidoListar?codbnfalu=29" target="_blank" class="normal" lang_en="Learn" lang_br="Aprender">Aprender</a></li>
+	<li><a href="https://uspdigital.usp.br/apolo/webMenuNavegacao.jsp?codmnu=2599" target="_blank" class="normal" lang_en="Promotion" lang_br="Fomento">Fomento</a></li>
+	<li><a href="https://uspdigital.usp.br/apolo/nacePropostaListar" target="_blank" class="normal" lang_en="NACEs" lang_br="NACEs">NACEs</a></li>
+	<li><a href="https://uspdigital.usp.br/apolo/editalProjetosListar" target="_blank" class="normal" lang_en="Bids" lang_br="Editais">Editais</a></li>	
+	<li><a href="https://uspdigital.usp.br/apolo/apoExtensaoCurso" target="_blank" class="normal" lang_en="Courses Offered" lang_br="Cursos Oferecidos">Cursos Oferecidos</a></li>
+	<li><a href="https://uspdigital.usp.br/apolo/extInscricaoPublicaInstrucao.jsp" target="_blank" class="normal" lang_en="Online Registration" lang_br="Inscri��es Online">Inscri��es Online</a></li>	
+</div>					
+
+<div class="publico-item">
+	<p class="linha" lang_en="Research" lang_br="Pesquisa">Pesquisa</p>
+	<li><a href="https://uspdigital.usp.br/atena" target="_blank" class="normal" lang_en="Atena" lang_br="Atena">Atena</a></li>	
+	<li><a href="https://uspdigital.usp.br/tycho/curCurriculoLattesBusca.jsp" target="_blank" class="normal" lang_en="Curriculum Lattes" lang_br="Curr�culo Lattes">Curr�culo Lattes</a></li>
+	<li><a href="https://uspdigital.usp.br/tycho/grpGrupoPesquisaBuscaGeral.jsp" target="_blank" class="normal" lang_en="Research Groups" lang_br="Grupos de Pesquisa">Grupos de Pesquisa</a></li>
+	<li><a href="https://uspdigital.usp.br/gpusp" target="_blank" class="normal" lang_en="Project Information Management" lang_br="Gest�o da Informa��o de Projetos">Gest�o da Informa��o de Projetos</a></li>
+	<li><a href="https://uspdigital.usp.br/datausp" target="_blank" class="normal" lang_en="weR_USP" lang_br="weR_USP">weR_USP</a></li>
+	<li><a href="http://uspmulti.prp.usp.br/" target="_blank" class="normal" lang_en="Multi-User Centers" lang_br="Centrais Multiusu�rios">Centrais Multiusu�rios</a></li>
+</div>						
+
+<div class="publico-item-primeiro"></div>
+<div class="publico-item"> 
+	<p class="linha" lang_en="Administration" lang_br="Administra��o">Administra��o</p>
+	<li><a href="https://uspdigital.usp.br/administrativo" target="_blank" class="normal" lang_en="Sistema Administrativo" lang_br="Sistema Administrativo">Sistema Administrativo</a></li>
+	<li><a href="https://uspdigital.usp.br/proteos" target="_blank" class="normal" lang_en="Proteos" lang_br="Proteos">Proteos</a></li>
+	<li><a href="https://uspdigital.usp.br/frotaweb" target="_blank" class="normal" lang_en="Frota" lang_br="Frota">Frota</a></li>
+	<li><a href="https://uspdigital.usp.br/rucard" target="_blank" class="normal" lang_en="Rucard" lang_br="Rucard">Rucard</a></li>
+	<li><a href="https://uspdigital.usp.br/mercurioweb/listarLicEditalAberto" target="_blank" class="normal" lang_en="Bids" lang_br="Licita��es">Licita��es</a></li>
+	<li><a href="https://uspdigital.usp.br/mercurioweb/aiPatrimonio.jsp" target="_blank" class="normal" lang_en="Property" lang_br="Patrim�nio">Patrim�nio</a></li>
+	<li><a href="https://uspdigital.usp.br/proteos/prtAndamento.jsp" target="_blank" class="normal" lang_en="Process Monitoring" lang_br="Acompanhamento de Processo">Acompanhamento de Processo</a></li>
+</div>					
+
+<div class="publico-item">
+	<p class="linha" lang_en="Finances" lang_br="Finan�as">Finan�as</p>
+	<li><a href="https://uspdigital.usp.br/mercurioweb" target="_blank" class="normal" lang_en="Merc�rioWeb" lang_br="Merc�rioWeb">Merc�rioWeb</a></li>
+	<li><a href="https://uspdigital.usp.br/mercurioweb/merBoletoBancarioAcompanhar.jsp" target="_blank" class="normal" lang_en="Slip Monitoring" lang_br="Acompanhar Boleto">Acompanhar Boleto</a></li>
+	<li><a href="https://uspdigital.usp.br/juno" target="_blank" class="normal" lang_en="Grants and Benefits" lang_br="Bolsas e Beneficios">Bolsas e Beneficios</a></li>
+	<li><a href="https://uspdigital.usp.br/mercurioweb/dwrConveniosPublicosListar.jsp" target="_blank" class="normal" lang_en="e_Covenants / Courses" lang_br="e_Conv�nios / Cursos">e_Conv�nios / Cursos</a></li>
+	<li><a href="https://uspdigital.usp.br/conveniousp" target="_blank" class="normal" lang_en="Covenants" lang_br="Conv�nios USP">Conv�nios USP</a></li>
+</div>
+
+<div class="publico-item">
+	<p class="linha" lang_en="Human Resources" lang_br="Recursos Humanos">Recursos Humanos</p>
+	<li><a href="https://uspdigital.usp.br/marteweb" target="_blank" class="normal" lang_en="MarteWeb" lang_br="MarteWeb">MarteWeb</a></li>
+	<li><a href="https://uspdigital.usp.br/cpa" target="_blank" class="normal" lang_en="Evolution Teaching Career" lang_br="Evolu��o Carreira Docente">Evolu��o Carreira Docente</a></li>
+	<li><a href="https://stou.ifractal.com.br/usp/" target="_blank" class="normal" lang_en="ifPonto (STOU)" lang_br="ifPonto (STOU)">ifPonto (STOU)</a></li>
+</div>
+							
+<div class="publico-item">
+	<p class="linha" lang_en="Managing" lang_br="Gest�o">Gest�o</p>
+	<li><a href="https://uspdigital.usp.br/datausp" target="_blank" class="normal" lang_en="Academic Indicators" lang_br="Indicadores Acad�micos">Indicadores Acad�micos</a></li>
+	<li><a href="https://uspdigital.usp.br/anuario" target="_blank" class="normal" lang_en="Statistical Yearbook" lang_br="Anu�rio Estat�stico">Anu�rio Estat�stico</a></li>	
+	<li><a href="https://uspdigital.usp.br/paineldogestor" target="_blank" class="normal" lang_en="Manager Panel" lang_br="Painel do Gestor">Painel do Gestor</a></li>
+	<li><a href="https://uspdigital.usp.br/tycho" target="_blank" class="normal" lang_en="Tycho" lang_br="Tycho">Tycho</a></li>	
+</div>					
+
+<div class="publico-item-primeiro"></div>
+<div class="publico-item">
+	<p class="linha" lang_en="International Relations" lang_br="Rela��es Internacionais">Rela��es Internacionais</p>	
+	<li><a href="https://uspdigital.usp.br/mundus" target="_blank" class="normal" lang_en="Mundus" lang_br="Mundus">Mundus</a></li>
+</div>
+
+<div class="publico-item">
+	<p class="linha" lang_en="Collegiates" lang_br="Colegiados">Colegiados</p>	
+	<li><a href="https://uspdigital.usp.br/nereu" target="_blank" class="normal" lang_en="Pauta Eletr�nica" lang_br="Pauta Eletr�nica">Pauta Eletr�nica</a></li>
+</div>
+
+<div class="publico-item">
+	<p class="linha" lang_en="Services" lang_br="Servi�os">Servi�os</p>
+	<li><a href="https://uspdigital.usp.br/eoficios" target="_blank" class="normal" lang_en="e-Of�cios" lang_br="e-Of�cios">e-Of�cios</a></li>
+	<li><a href="https://uspdigital.usp.br/telefonia" target="_blank" class="normal" lang_en="Telephony" lang_br="Telefonia">Telefonia</a></li>		
+	<li><a href="https://uspdigital.usp.br/iddigital" target="_blank" class="normal" lang_en="Authenticity of Documents" lang_br="Autenticidade de Documentos">Autenticidade de Documentos</a></li>
+	<li><a href="https://uspdigital.usp.br/netunoweb" target="_blank" class="normal" lang_en="Diplomas" lang_br="Diplomas">Diplomas</a></li>
+	<li><a href="http://www5.usp.br/servicos/" target="_blank" class="normal" lang_en="More Services" lang_br="Mais Servi�os">Mais Servi�os</a></li>
+</div>
+
+<div class="publico-item">
+	<p class="linha" lang_en="Central Management" lang_br="�rg�o Central">�rg�o Central</p>	
+	<li><a href="https://uspdigital.usp.br/gr" target="_blank" class="normal" lang_en="Teaching Contract" lang_br="Admiss�o Docente">Admiss�o Docente</a></li>	
+	<li><a href="https://uspdigital.usp.br/cert" target="_blank" class="normal" lang_en="CERT" lang_br="CERT">CERT</a></li>	
+	<!-- <li><a href='https://gvr.uspdigital.usp.br/cpa' target='_blank' class='normal' lang_en="Institutional Evaluation 2010 - 2014" lang_br="Avalia��o Institucional 2010 - 2014">Avalia��o Institucional 2010 - 2014</a></li> -->	
+	<li><a href="https://uspdigital.usp.br/cpa" target="_blank" class="normal" lang_en="CPA Evaluation" lang_br="CPA - Comiss�o Permanente de Avalia��o">CPA - Comiss�o Permanente de Avalia��o</a></li>
+	<li><a href="https://uspdigital.usp.br/campususp" target="_blank" class="normal" lang_en="Campus USP" lang_br="Campus USP">Campus USP</a></li>
+</div>
+
+<div class="publico-item-primeiro"></div>
+<div class="publico-item clsAutenticado" style="display:none">
+	<p class="linha" lang_en="More Services" lang_br="Outros Servi�os">Outros Servi�os</p>
+	<li><a href="https://uspdigital.usp.br/wsusuario/gedweb.jsp" target="_blank" class="normal" lang_en="GedWeb" lang_br="GedWeb - Normas ABNT">GedWeb - Normas ABNT</a></li>	
+</div>
+	</div>
+
+	
+<br>
+<div id="web_rodape_texto">
+	� 1999 -
+	2024
+	-  Superintend�ncia de Tecnologia da Informa��o / Universidade de S�o Paulo
+</div>
+
+</body></html>
