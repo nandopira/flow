@@ -27,11 +27,6 @@ use App\Http\Controllers\GoogleAuthController;
 |
 */
 
-
-Route::get('/classic', function () {
-    return view('classic');
-});
-
 Route::get('/painel', function () {
     return view('painel');
 });
@@ -69,11 +64,6 @@ Route::post('/consulta-processo', [ProcessoController::class, 'consultaProcesso'
 
 Route::get('/get-token', [AuthController::class, 'getToken']);
 
-
-Route::get('/', function () {
-    return view('index');
-});
-
 //Route::get('/', function () {
 //    return view('index');
 //})->middleware('auth');
@@ -93,10 +83,9 @@ Route::get('/login', function () {
 Route::get('auth/google', [GoogleCalendarController::class, 'redirectToGoogle']);
 //Route::get('auth/google/callback', [GoogleCalendarController::class, 'handleGoogleCallback']);
 
-
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('index');
+});
 
 Route::get('login/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback'])->name('google.callback');

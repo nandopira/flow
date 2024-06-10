@@ -27,7 +27,7 @@
 		@guest
                
         <button id="login-button" class="google-button">
-        <a href="{{ url('auth/google') }}">  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+        <a href="{{ route('google.login') }}">  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
                 Entrar com Google
         </a>
             </button>
