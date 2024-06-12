@@ -13,18 +13,24 @@ return new class extends Migration
     {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->integer('count');
             $table->string('superior')->nullable();
             $table->string('titulo');
-            $table->string('descricao')->nullable();
-            $table->string('num_usp_autor');
-            $table->string('num_usp_atribuido')->nullable();
+            $table->string('descricao');
+            $table->string('createdby');
+            $table->string('tipo');
+            $table->string('setor')->nullable();
+            $table->string('status')->nullable();
+            $table->string('situacao')->nullable();
+            $table->string('categoria')->nullable();
             $table->date('dtprevini')->nullable();
-            $table->date('dtprovfim')->nullable();
+            $table->date('dtprevfim')->nullable();
             $table->date('dtfim')->nullable();
             $table->date('dtini')->nullable();
             
             $table->timestamps();
         });
+
     }
 
     /**

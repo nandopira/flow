@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Envolvido;
 use App\Models\Tarefa;
 use App\Models\Dpto;
 use App\Models\Notificacao;
@@ -12,8 +13,8 @@ class AtendimentoController extends Controller
 {
     public function index()
     {
-        $tarefas = Tarefa::where('tipo', 'atendimento')->get();;
-        return view('atendimento.index', compact('tarefas'));
+        $atendimentos = Tarefa::where('tipo', 'atendimento')->get();;
+        return view('atendimento.index', compact('atendimentos'));
     }
 
     public function create()
@@ -28,15 +29,14 @@ class AtendimentoController extends Controller
             'superior' => $request->superior,
             'titulo' => $request->titulo,
             'descricao' => $request->descricao,
-            'num_usp_autor' => $request->num_usp_autor,
-            'num_usp_atribuido' => $request->num_usp_atribuido,
-            'dtprevini' => $request->dtprevini,
-            'dtprevfim' => $request->dtprevfim,
+            'createdby' => $request->createdby,
+            'dtprevini' => now(),
+            'dtprevfim' => now()->addDays(3),
             'tipo' => 'atendimento'
         ]);
 
         // Consulta do email do num_usp_atribuido na tabela Pessoa
-        $pessoa = Pessoa::where('num_usp', $request->num_usp_atribuido)->first();
+        $pessoa = Pessoa::where('num_usp', $request->createdby)->first();
 
         if ($pessoa) {
             // Gravação na tabela EnviarEmails
@@ -44,7 +44,7 @@ class AtendimentoController extends Controller
                 'titulo' => $request->titulo,
                 'descricao' => $request->descricao,
                 'emaildestino' => $pessoa->email,
-                'mensagem' => 'Nova atividade atribuída no projeto: ' . $request->titulo
+                'mensagem' => 'Nova atendimento registrado: ' . $request->titulo
             ]);
         }
 
@@ -60,17 +60,20 @@ class AtendimentoController extends Controller
     public function edit($id)
     {
         $atendimento = Tarefa::findOrFail($id);
+        $solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
+        $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
+        $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
         //$projetos = Projeto::where('setorResponsavel', 'engenharia')->get(); // Exemplo para selecionar projetos do setor de engenharia
-        return view('atendimento.edit', compact('atendimento'));
+        return view('atendimento.edit', compact('atendimento', 'solicitantes','atendentes','observadores'));
     }
 
     public function update(Request $request, $id)
     {
         $atendimento = Tarefa::findOrFail($id);
-        $atendimento->superior = $request->superior;
-        $atendimento->tipo = 'atendimento';
-        $atendimento->titulo = $request->titulo;
-        $atendimento->descricao = $request->descricao;
+        //$atendimento->superior = $request->superior;
+        //$atendimento->tipo = 'atendimento';
+        //$atendimento->titulo = $request->titulo;
+        //$atendimento->descricao = $request->descricao;
         $atendimento->num_usp_autor = $request->num_usp_autor;
         $atendimento->num_usp_atribuido = $request->num_usp_atribuido;
         $atendimento->dtprevini = $request->dtprevini;

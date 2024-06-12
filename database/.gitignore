@@ -1,0 +1,6 @@
+*.sqlite
+*.bak
+*.old
+*.log
+/backups
+/cache

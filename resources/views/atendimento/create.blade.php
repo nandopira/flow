@@ -14,15 +14,20 @@
         @csrf
         <input type="hidden" id="tipo" name="tipo" value="atendimento"> 
         <div class="form-group">
-            <label for="nome">Descrição</label>
-            <textarea class="form-control" id="nome" name="nome" placeholder="Digite o nome" required></textarea>
+            <label for="Titulo">Titulo</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" maxlength="200" placeholder="Digite o título da solicitação ou ocorrência..." required>
         </div>
         <div class="form-group">
-            <label for="numeroUSP">Número USP</label>
-            <input type="text" class="form-control" id="numeroUSP" name="numeroUSP" maxlength="255" placeholder="Digite o número USP" required>
+            <label for="descricao">Descrição</label>
+            <textarea class="form-control" id="descricao" name="descricao" placeholder="Digite a descrição da solicitação ou ocorrência..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="createdby">Número USP</label>
+            <input type="text" class="form-control" id="createdby" name="createdby" maxlength="15" placeholder="Digite seu número USP" required>
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
+    <br>
 
     @if ($errors->any())
                     <div class="alert alert-danger mt-3">

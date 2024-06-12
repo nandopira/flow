@@ -69,9 +69,9 @@
 
 		<div id="layout_conteudo">
 
-<div id="my_web_cabecalho">
+<!--div id="my_web_cabecalho">
 	<a href="/marteweb/webMenuNavegacao.jsp?codmnu=9022" class="link_cabecalho">Projetos</a> &gt; Detalhes
-</div>
+</div -->
 	
 	@yield('content')
 

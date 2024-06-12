@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('projeto_comentarios', function (Blueprint $table) {
+        Schema::create('envolvidos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('projeto_id')->constrained()->onDelete('cascade');
-// for mysql            $table->foreign('projeto_id')->references('id')->on('projetos')->onDelete('cascade');
-            $table->text('comentario');
-            $table->string('pessoa');           
+            $table->string('tarefa_id');
+            $table->string('tipo');
+            $table->string('numeroUSP');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('projeto_comentarios');
+        Schema::dropIfExists('envolvidos');
     }
 };

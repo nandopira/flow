@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\AtividadeController;
 use App\Http\Controllers\ProjetoController;
@@ -12,8 +13,8 @@ use App\Http\Controllers\ProjetoEngenhariaController;
 use App\Http\Controllers\GoogleCalendarController;
 use App\Http\Controllers\ProcessoController;
 use App\Http\Controllers\AuthController;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\AtendimentoController;
 
 
 /*
@@ -29,6 +30,11 @@ use App\Http\Controllers\GoogleAuthController;
 
 Route::get('/painel', function () {
     return view('painel');
+});
+
+
+Route::get('/teste', function () {
+    return view('teste');
 });
 
 Route::get('/det', function () {
