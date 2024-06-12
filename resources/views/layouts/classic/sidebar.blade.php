@@ -111,14 +111,14 @@
         </ul>
     </li>  
     <li>
-        <a href="{{ route('projeto.index') }}">Projetos</a>
+        <a href="{{ route('projeto.index') }}">Projeto</a>
         <ul>
-            <li><a href="{{ route('projeto.create') }}">Novo registro</a></li>
-            <li><a href="{{ route('projeto.index') }}">Consultar</a></li>
+            <li><a href="{{ route('atendimento.create') }}">Novo registro</a></li>
+            <li><a href="{{ route('atendimento.index') }}">Consultar</a></li>
         </ul>
     </li>
     <li>
-    <a href="{{ route('atividade.index') }}">Atividades </a>
+    <a href="{{ route('atendimento.index') }}">Atendimento </a>
         <ul>
             <li><a href="{{ route('atividade.create') }}">Novo registro</a></li>
             <li><a href="{{ route('atividade.index') }}">Consultar</a></li>

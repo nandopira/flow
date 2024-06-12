@@ -54,6 +54,7 @@ Route::resource('etapa', EtapaController::class);
 Route::resource('projeto', ProjetoController::class);
 Route::resource('dpto', DptoController::class);
 Route::resource('pessoa', PessoaController::class);
+Route::resource('atendimento', AtendimentoController::class);
   
 Route::get('create-event', [GoogleCalendarController::class, 'showCreateEventForm'])->name('events.create');
 Route::post('store-event', [GoogleCalendarController::class, 'storeEvent'])->name('events.store');
