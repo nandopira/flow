@@ -13,17 +13,12 @@
                     Titulo: <span style="color: black;"> {{$atendimento->titulo }} </span>
                 </div>
                 <div class="form-group col">
-                 <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Atender</button>
-                <button class="btn btn-danger">Rejeitar</button>
-                
+                    Criado a: <span style="color: black;"> {{$atendimento->momcad }} 09 dias atras</span>
                 </div>
         </div>
         <div class="form-row">    
                 <div class="form-group col">
                 Descrição: <span style="color: black;"> {{$atendimento->Descricao }} </span>
-                </div>
-                <div class="form-group col">
-                    Criado a: <span style="color: black;"> {{$atendimento->momcad }} 09 dias atras</span>
                 </div>
         </div>
             <div class="form-row">
@@ -62,41 +57,12 @@
             <div class="tab-pane fade" id="tabela2" role="tabpanel" aria-labelledby="tabela2-tab">
                @include('atendimento.tabagenda')
             </div>
-            <div class="tab-pane fade" id="tabela3" role="tabpanel" aria-labelledby="tabela3-tab">@include('atendimento.tabenvolvidos')</div>
+            <div class="tab-pane fade" id="tabela3" role="tabpanel" aria-labelledby="tabela3-tab">@include('atendimento.tabenvolvido')</div>
             <div class="tab-pane fade" id="tabela4" role="tabpanel" aria-labelledby="tabela4-tab">@include('atendimento.tabarquivos')</div>
 
         </div>
     </div>
 </div>
-
-    </div>
-</div>
-</div>
-
-
-    <!-- Modal de Aprovação -->
-    <div class="modal fade" id="aprovarModal" tabindex="-1" aria-labelledby="aprovarModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="aprovarModalLabel">Justificativa para Aprovação</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="justificativaForm">
-                        <div class="form-group">
-                            <label for="justificativa">Justificativa</label>
-                            <textarea class="form-control" id="justificativa" name="justificativa" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     </div>
 </div>
