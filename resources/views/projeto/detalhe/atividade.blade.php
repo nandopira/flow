@@ -100,7 +100,7 @@ background-color: #f7f7ff;
 					<div>
 						<h5 class="mb-0">Arquivos recentes</h5>
 					</div>
-					<div class="ms-auto"><a href="{{ route('atividade.create', $projeto->id) }}" class="btn btn-sm btn-outline-secondary">Nova Atividade</a>
+					<div class="ms-auto"><a href="sss" class="btn btn-sm btn-outline-secondary">Nova Atividade</a>
 					</div>
 				</div>
 				<div class="table-responsive mt-3">
