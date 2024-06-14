@@ -61,6 +61,8 @@ Route::resource('projeto', ProjetoController::class);
 Route::resource('dpto', DptoController::class);
 Route::resource('pessoa', PessoaController::class);
 Route::resource('atendimento', AtendimentoController::class);
+Route::get('/atender/{id}', [AtendimentoController::class, 'atender'])->name('atendimento.atender');
+
   
 Route::get('create-event', [GoogleCalendarController::class, 'showCreateEventForm'])->name('events.create');
 Route::post('store-event', [GoogleCalendarController::class, 'storeEvent'])->name('events.store');

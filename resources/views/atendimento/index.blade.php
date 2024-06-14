@@ -123,7 +123,7 @@
                     <td>{{ $atendimento->count }}</td>
                     <td>{{ $atendimento->titulo ?? $atendimento->descricao }}</td>
                     <td>{{ $atendimento->status }}</td>
-                    <td>{{ $atendimento->created_at }}</td>
+                    <td>{{ $atendimento->created_at->format('d/m/Y H:i') }}</td>
                     <td>{{ $atendimento->num_usp_atribuido }}</td>
                     <td>
                         <a href="{{ route('atendimento.edit', $atendimento->id) }}" class="btn btn-primary btn-sm">Editar</a>

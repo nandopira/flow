@@ -31,6 +31,7 @@ class Tarefa extends Model
         'titulo',
         'descricao',
         'createdby',
+        'atendente',
         'dtprevfim',
         'dtprevini',
         'dtini',

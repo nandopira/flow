@@ -17,6 +17,17 @@ class AtendimentoController extends Controller
         return view('atendimento.index', compact('atendimentos'));
     }
 
+    public function atender($id)
+    {
+        $atendimento = Tarefa::findOrFail($id);
+        
+        //$atendimento->atendente = $request->user()->id; // Atribui o usuário logado
+        $atendimento->status = 'em atendimento'; // Atualiza o status
+        $atendimento->save();      
+
+        return response()->json(['message' => 'Registro salvo com sucesso!']);
+    }
+  
     public function create()
     {
         $setores = Dpto::where('tipo', 'setor')->get();              
@@ -32,6 +43,7 @@ class AtendimentoController extends Controller
             'createdby' => $request->createdby,
             'dtprevini' => now(),
             'dtprevfim' => now()->addDays(3),
+            'status' => 'novo',
             'tipo' => 'atendimento'
         ]);
 
