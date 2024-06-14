@@ -44,13 +44,17 @@
             </div>
             <div class="form-row">
             <div class="form-group col" id="atendente-group">        
-                 <label for="interacao">Interação</label>
-                    <textarea class="form-control" cols="3" id="atendente-autocomplete" placeholder="Digite sua interação..."></textarea>    
-                 </div>
-                    <div class="form-group col" id="atendente-group">
-<br><br>                         <button class="btn btn-danger">Salvar</button>   
-                    </div>            
+                 <label for="interacao">Interação</label>                    
+                    <form action="{{ route('log.storeTask', ['id' => $atendimento->id]) }}" method="POST" style="display:inline;">
+                     @csrf
+                     <label for="interacao">Interação</label>
+                    <textarea class="form-control" cols="3" id="atendente-autocomplete" placeholder="Digite sua interação..."></textarea>                    
+                    <div class="text-right mt-2"> 
+                         <button type="submit" class="btn btn-success">Salvar</button>
+                    </div>
+                    </form>
             </div>   
+            </div>
             
             <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
             <li class="nav-item">

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('descricao');
             $table->string('createdby');
             $table->string('tipo');
+            $table->string('atendente')->nullable();;
             $table->string('setor')->nullable();
             $table->string('status')->nullable();
             $table->string('situacao')->nullable();

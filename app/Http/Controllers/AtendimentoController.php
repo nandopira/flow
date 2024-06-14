@@ -21,11 +21,11 @@ class AtendimentoController extends Controller
     {
         $atendimento = Tarefa::findOrFail($id);
         
-        //$atendimento->atendente = $request->user()->id; // Atribui o usuário logado
+        $atendimento->atendente = '7023777'; // Atribui o usuário logado
         $atendimento->status = 'em atendimento'; // Atualiza o status
         $atendimento->save();      
-
-        return response()->json(['message' => 'Registro salvo com sucesso!']);
+        
+        return view('atendimento.edit', compact('atendimento'));
     }
   
     public function create()
