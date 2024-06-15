@@ -26,8 +26,41 @@ class AtendimentoController extends Controller
         $atendimento->status = 'em atendimento'; // Atualiza o status
         $atendimento->save();      
         
-        return view('atendimento.edit', compact('atendimento'));
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get();
+        return view('atendimento.edit', compact('atendimento','logs'));
     }
+
+    public function novaTarefa(Request $request, $id)
+    {
+        $atendimento = Tarefa::findOrFail($id);
+
+        Tarefa::create([
+            'superior' => $id,
+            'titulo' => 'Nova tarefa de '+ $atendimento->titulo,
+            'descricao' => $request->NovaTarefaDescricao,
+            'createdby' => '7023777', //será número usp logado
+            'dtprevini' => now(),
+            'dtprevfim' => now()->addDays(3),
+            'status' => 'novo',
+            'tipo' => 'TAREFA'
+        ]);
+
+        Log::create([
+            'table_name' => 'TAREFA',
+            'foreign_id' => $id,
+            'message' => 'Criado nova tarefa',
+            'createdby' => '7023777',
+            'nivel' => 'NORMAL',
+            'event_type' => 'COMENTARIO',
+            'ip_address' => $request->ip()
+        ]);
+
+
+        
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get();
+        return view('atendimento.edit', compact('atendimento','logs'));
+    }
+ 
   
     public function create()
     {

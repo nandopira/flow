@@ -15,6 +15,7 @@ use App\Http\Controllers\ProcessoController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\AtendimentoController;
+use App\Http\Controllers\AgendamentoController;
 use App\Http\Controllers\LogController;
 
 /*
@@ -64,6 +65,7 @@ Route::resource('atendimento', AtendimentoController::class);
 Route::get('/atender/{id}', [AtendimentoController::class, 'atender'])->name('atendimento.atender');
 
 Route::post('/atendimento/comentario/{id}/adicionar', [LogController::class, 'storeTask'])->name('log.storeTask');
+Route::post('/atendimento/tarefa/{id}/adicionar', [AtendimentoController::class, 'newTask'])->name('atendimento.novatarefa');
   
 Route::get('create-event', [GoogleCalendarController::class, 'showCreateEventForm'])->name('events.create');
 Route::post('store-event', [GoogleCalendarController::class, 'storeEvent'])->name('events.store');
@@ -73,6 +75,9 @@ Route::get('/consulta-processo', [ProcessoController::class, 'showForm']);
 Route::post('/consulta-processo', [ProcessoController::class, 'consultaProcesso']);
 
 Route::get('/get-token', [AuthController::class, 'getToken']);
+
+Route::get('/agendamento', [AgendamentoController::class, 'create']); 
+Route::post('/agendamento', [AgendamentoController::class, 'store']); 
 
 //Route::get('/', function () {
 //    return view('index');
