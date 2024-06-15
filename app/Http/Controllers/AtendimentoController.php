@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Envolvido;
 use App\Models\Tarefa;
 use App\Models\Dpto;
+use App\Models\Log;
 use App\Models\Notificacao;
 use App\Models\Pessoa;
 use Illuminate\Http\Request;
@@ -75,8 +76,8 @@ class AtendimentoController extends Controller
         $solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
         $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
         $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
-        //$projetos = Projeto::where('setorResponsavel', 'engenharia')->get(); // Exemplo para selecionar projetos do setor de engenharia
-        return view('atendimento.edit', compact('atendimento', 'solicitantes','atendentes','observadores'));
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
+        return view('atendimento.edit', compact('atendimento', 'solicitantes','atendentes','observadores','logs'));
     }
 
     public function update(Request $request, $id)

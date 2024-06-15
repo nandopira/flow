@@ -17,21 +17,21 @@ class LogController extends Controller
         return view('log.index', compact('logs'));
     }
 
-    public function storeTask(Request $request)
+    public function storeTask(Request $request) //storeLog -> alterar
     {      
           Log::create([
-            'table_name' => 'TAREFA',
+            'table_name' => $request->table_name,
             'foreign_id' => $request->id,
             'message' => $request->interacao,
-            'createdby' => $request->usuario,
+            'createdby' => '7023777',
             'nivel' => 'NORMAL',
             'event_type' => 'COMENTARIO',
-            'ip_address' => $request->ip_address
+            'ip_address' => $request->ip()
         ]);
 
         // Consulta do email do num_usp_atribuido na tabela Pessoa
-        $pessoa = Pessoa::where('num_usp', $request->usuario)->first();
-
+        //$pessoa = Pessoa::where('num_usp', $request->usuario)->first();
+/* 
         if ($pessoa) {
             // Gravação na tabela EnviarEmails
             Notificacao::create([
@@ -41,6 +41,7 @@ class LogController extends Controller
                 'mensagem' => 'Nova comentário registrado: ' . $request->titulo
             ]);
         }
+*/
 
         return redirect()->back()->with('success', 'Registro salvo com sucesso!');
     }

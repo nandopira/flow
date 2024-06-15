@@ -19,7 +19,8 @@
 
                 @else
                     <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Transferir</button>
-                    <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Nova Tarefa</button>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Agendar</button>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#NovaTarefaModal">Nova Tarefa</button>
                 @endif
                 </div>
         </div>
@@ -28,7 +29,12 @@
                 Descrição: <span style="color: black;"> {{$atendimento->descricao }} </span>
                 </div>
                 <div class="form-group col">
-                    Criado a: <span style="color: black;"> {{$atendimento->momcad }} 09 dias atras</span>
+                @php
+                    $createdDate = \Carbon\Carbon::parse($atendimento->created_at);
+                    $currentDate = \Carbon\Carbon::now();
+                    $daysDifference = $createdDate->diffInDays($currentDate);
+                @endphp
+                    Criado a: <span style="color: black;">{{ $daysDifference == 0 ? 'hoje' : $daysDifference . ' dias atrás' }}</span>
                 </div>
         </div>
             <div class="form-row">
@@ -48,9 +54,11 @@
                     <form action="{{ route('log.storeTask', ['id' => $atendimento->id]) }}" method="POST" style="display:inline;">
                      @csrf
                      <label for="interacao">Interação</label>
-                    <textarea class="form-control" cols="3" id="atendente-autocomplete" placeholder="Digite sua interação..."></textarea>                    
+                    <textarea class="form-control" cols="3" id="interacao" name="interacao" placeholder="Digite sua interação..."></textarea>                    
+                    <input type="hidden" name="table_name" id="table_name" value="TAREFA">
                     <div class="text-right mt-2"> 
                          <button type="submit" class="btn btn-success">Salvar</button>
+                         <button type="submit" class="btn btn-success">Finalizar</button>
                     </div>
                     </form>
             </div>   
@@ -92,29 +100,7 @@
 </div>
 
 
-    <!-- Modal de Aprovação -->
-    <div class="modal fade" id="aprovarModal" tabindex="-1" aria-labelledby="aprovarModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="aprovarModalLabel">Justificativa para Aprovação</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="justificativaForm">
-                        <div class="form-group">
-                            <label for="justificativa">Justificativa</label>
-                            <textarea class="form-control" id="justificativa" name="justificativa" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
+@include('atendimento.modal')
 
     </div>
 </div>
