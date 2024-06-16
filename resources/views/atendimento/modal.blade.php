@@ -100,7 +100,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <form action="{{ route('agenda.store', ['id' => $atendimento->id]) }}" method="POST" style="display:inline;">
+                <form action="{{ route('envolvido.store', ['id' => $atendimento->id]) }}" method="POST" style="display:inline;">
                      @csrf
                     <input type="hidden" name="table_name" id="table_name" value="TAREFA"> 
                     <input type="hidden" name="tipo" id="tipo" value="TAREFA">                      
