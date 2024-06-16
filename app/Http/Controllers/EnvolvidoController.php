@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AtendimentoController;
+
 use Illuminate\Http\Request;
 
 use App\Models\Envolvido;
-use App\Models\Log;
-use App\Models\Tarefa;
-use App\Models\Agenda;
+//use App\Models\Log;
+//use App\Models\Tarefa;
+//use App\Models\Agenda;
 
 class EnvolvidoController extends Controller
 {
@@ -35,17 +37,7 @@ class EnvolvidoController extends Controller
         ]);
 ***/
         
-$atendimento = Tarefa::findOrFail($id);
-$solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
-$atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
-$observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
-$envolvidos = Envolvido::where('tarefa_id', $id)->get();
-$logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
-$agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
-$tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
-return view('atendimento.edit', compact('envolvidos','tarefas','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
-
+        $atendimentoController = new AtendimentoController();
+        return $atendimentoController->loadpage($id);
     }
-
-
 }
