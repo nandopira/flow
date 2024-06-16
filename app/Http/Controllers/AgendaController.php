@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Tarefa;
 use App\Models\Log;
 use App\Models\Agenda;
+use App\Models\Envolvido;
 
 class AgendaController extends Controller
 {
@@ -37,7 +38,7 @@ class AgendaController extends Controller
     public function store(Request $request)
     {
         $atendimento = Tarefa::findOrFail($request->atendimento_id);
-
+        $id = $request->atendimento_id;
         Agenda::create([
             'foreign_id' => $request->atendimento_id,
             'table_name' => $request->table_name,
@@ -59,7 +60,15 @@ class AgendaController extends Controller
         ]);
 ***/
         
-        $logs = Log::where('foreign_id', $request->atendimento_id)->where('table_name', 'TAREFA')->get();
-        return view('atendimento.edit', compact('atendimento','logs'));
+
+$solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
+$atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
+$observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
+$envolvidos = Envolvido::where('tarefa_id', $id)->get();
+$logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
+$agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
+$tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
+return view('atendimento.edit', compact('envolvidos','tarefas','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
+
     }
 }

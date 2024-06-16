@@ -101,9 +101,7 @@
                 </div>
                 <div class="modal-body">
                 <form action="{{ route('envolvido.store', ['id' => $atendimento->id]) }}" method="POST" style="display:inline;">
-                     @csrf
-                    <input type="hidden" name="table_name" id="table_name" value="TAREFA"> 
-                    <input type="hidden" name="tipo" id="tipo" value="TAREFA">                      
+                     @csrf                   
                     <input type="hidden" name="atendimento_id" id="atendimento_id" value="{{$atendimento->id}}">        
                     <div class="form-group">
                     <div class="form-group row">
@@ -121,7 +119,7 @@
                           </div>
 
                           <div class="form-group col">
-                          <select class="form-control" id="papelEnvolvido" name="tippapelEnvolvidoo" required>
+                          <select class="form-control" id="papelEnvolvido" name="papelEnvolvido" required>
                 <option value="Atendente">Atendente</option>
                 <option value="Solicitante">Solicitante</option>
                 <option value="Observador" selected>Observador</option>

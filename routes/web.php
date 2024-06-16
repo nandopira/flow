@@ -17,6 +17,7 @@ use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\AtendimentoController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\EnvolvidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +67,8 @@ Route::get('/atender/{id}', [AtendimentoController::class, 'atender'])->name('at
 
 Route::post('/atendimento/comentario/{id}/adicionar', [LogController::class, 'storeTask'])->name('log.storeTask');
 Route::post('/atendimento/tarefa/{id}/adicionar', [AtendimentoController::class, 'novatarefa'])->name('atendimento.novatarefa');
-  
+Route::resource('envolvido', EnvolvidoController::class);
+
 Route::get('create-event', [GoogleCalendarController::class, 'showCreateEventForm'])->name('events.create');
 Route::post('store-event', [GoogleCalendarController::class, 'storeEvent'])->name('events.store');
 

@@ -27,8 +27,15 @@ class AtendimentoController extends Controller
         $atendimento->status = 'em atendimento'; // Atualiza o status
         $atendimento->save();      
         
-        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get();
-        return view('atendimento.edit', compact('atendimento','logs'));
+        $solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
+        $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
+        $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
+        $envolvidos = Envolvido::where('tarefa_id', $id)->get();
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
+        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
+        $tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
+        return view('atendimento.edit', compact('envolvidos','tarefas','disponibilidades','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
+ 
     }
 
     public function novaTarefa(Request $request, $id)
@@ -57,10 +64,15 @@ class AtendimentoController extends Controller
         ]);
 
 
-        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
-        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get();
+        $solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
+        $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
+        $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
+        $envolvidos = Envolvido::where('tarefa_id', $id)->get();
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
+        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
         $tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
-        return view('atendimento.edit', compact('atendimento','logs','agendas','tarefas'));
+        return view('atendimento.edit', compact('envolvidos','tarefas','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
+ 
     }
  
   
