@@ -19,7 +19,7 @@
 
                 @else
                     <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Transferir</button>
-                    <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Agendar</button>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#agendaModal">Agendar</button>
                     <button class="btn btn-success" data-toggle="modal" data-target="#NovaTarefaModal">Nova Tarefa</button>
                 @endif
                 </div>
@@ -86,12 +86,13 @@
             @include('atendimento.tabandamento')
         </div>
             <div class="tab-pane fade" id="tabela2" role="tabpanel" aria-labelledby="tabela2-tab">
-               @include('atendimento.tabagenda')
+               @include('atendimento.tabtarefa')
             </div>
-            <div class="tab-pane fade" id="tabela3" role="tabpanel" aria-labelledby="tabela3-tab">@include('atendimento.tabenvolvidos')</div>
-            <div class="tab-pane fade" id="tabela4" role="tabpanel" aria-labelledby="tabela4-tab">@include('atendimento.tabarquivos')</div>
+            <div class="tab-pane fade" id="tabela3" role="tabpanel" aria-labelledby="tabela3-tab">@include('atendimento.tabagenda')</div>
+            <div class="tab-pane fade" id="tabela4" role="tabpanel" aria-labelledby="tabela4-tab">@include('atendimento.tabenvolvidos')</div>
             <div class="tab-pane fade" id="tabela5" role="tabpanel" aria-labelledby="tabela5-tab">@include('atendimento.tabarquivos')</div>
         </div>
+        <br>
     </div>
 </div>
 

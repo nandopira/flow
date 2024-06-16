@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
-class Tarefa extends Model
+class Agenda extends Model
 {
     use HasFactory;
 
@@ -25,23 +25,17 @@ class Tarefa extends Model
             $model->count = $maxCount + 1;
         });
     }   
-    
-    
-    public function getdtpreviniAttribute($value)
+
+    public function getDataAgendadaAttribute($value)
     {
         return Carbon::parse($value);
     }
 
     protected $fillable = [
-        'superior',
-        'tipo',
-        'titulo',
-        'descricao',
+        'table_name',
+        'foreign_id',
         'createdby',
-        'atendente',
-        'dtprevfim',
-        'dtprevini',
-        'dtini',
-        'dtfim','setor','status','situacao','categoria'
+        'proprietario',
+        'event_type','ip_address','data_agendada'
     ];
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agenda;
 use App\Models\Envolvido;
 use App\Models\Tarefa;
 use App\Models\Dpto;
@@ -36,7 +37,7 @@ class AtendimentoController extends Controller
 
         Tarefa::create([
             'superior' => $id,
-            'titulo' => 'Nova tarefa de '+ $atendimento->titulo,
+            'titulo' => 'Nova tarefa de ' . $atendimento->titulo,
             'descricao' => $request->NovaTarefaDescricao,
             'createdby' => '7023777', //será número usp logado
             'dtprevini' => now(),
@@ -56,9 +57,10 @@ class AtendimentoController extends Controller
         ]);
 
 
-        
+        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
         $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get();
-        return view('atendimento.edit', compact('atendimento','logs'));
+        $tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
+        return view('atendimento.edit', compact('atendimento','logs','agendas','tarefas'));
     }
  
   
@@ -105,12 +107,22 @@ class AtendimentoController extends Controller
 
     public function edit($id)
     {
+        // Suponha que temos uma lista de datas com suas disponibilidades
+        $disponibilidades = [
+            '2024-06-20' => 'disponível',
+            '2024-06-21' => 'indisponível',
+            '2024-06-22' => 'parcial'
+        ];
+
         $atendimento = Tarefa::findOrFail($id);
         $solicitantes = Envolvido::where('tarefa_id', $id)->where('tipo', 'SOLICITANTE')->get();
         $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
         $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
-        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
-        return view('atendimento.edit', compact('atendimento', 'solicitantes','atendentes','observadores','logs'));
+        $envolvidos = Envolvido::where('tarefa_id', $id)->get();
+        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
+        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
+        $tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
+        return view('atendimento.edit', compact('envolvidos','tarefas','disponibilidades','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
     }
 
     public function update(Request $request, $id)

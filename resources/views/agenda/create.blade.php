@@ -21,7 +21,7 @@
     <form action="/agendamento" method="POST">
         @csrf
         <label for="datetime">Data e Hora:</label>
-        <input type="text" id="datetime" name="datetime">
+        <input type="text" id="datetimeAgenda" name="datetimeAgenda">
         <button type="submit">Agendar</button>
     </form>
 
@@ -31,7 +31,7 @@
         $(function() {
             var disponibilidades = @json($disponibilidades);
 
-            $("#datetime").datepicker({
+            $("#datetimeAgenda").datepicker({
                 beforeShowDay: function(date) {
                     var dateString = $.datepicker.formatDate('yy-mm-dd', date);
                     if (disponibilidades[dateString] === 'indisponível') {
