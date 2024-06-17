@@ -65,9 +65,22 @@ class AtendimentoController extends Controller
         $atendentes = Envolvido::where('tarefa_id', $id)->where('tipo', 'ATENDENTE')->get();
         $observadores = Envolvido::where('tarefa_id', $id)->where('tipo', 'OBSERVADOR')->get();
         $envolvidos = Envolvido::where('tarefa_id', $id)->get();
-        $logs = Log::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); 
-        $agendas = Agenda::where('foreign_id', $id)->where('table_name', 'TAREFA')->get(); // Exemplo para selecionar projetos do setor de engenharia
-        $tarefas = Tarefa::where('superior', $id)->where('tipo', 'TAREFA')->get();
+               
+        $logs = Log::where('foreign_id', $id)
+        ->where('table_name', 'TAREFA')
+        ->orderBy('id', 'desc') // Sort by ID in descending order
+        ->get();
+
+        $agendas = Agenda::where('foreign_id', $id)
+        ->where('table_name', 'TAREFA')
+        ->orderBy('id', 'desc') 
+        ->get(); 
+
+        $tarefas = Tarefa::where('superior', $id)
+        ->where('tipo', 'TAREFA')
+        ->orderBy('id', 'desc') 
+        ->get();
+        
         return view('atendimento.edit', compact('envolvidos','tarefas','atendimento', 'solicitantes','atendentes','observadores','logs','agendas'));
 
     }

@@ -52,7 +52,9 @@ class GoogleAuthController extends Controller
         // Faça o login do usuário
         Auth::login($user);
 
-        return redirect()->route('index',compact('google_user'));
+        //return redirect()->route('index',compact('google_user'));
+
+        return redirect()->route('events.create',compact('google_user'));
     }
 
     public function logout()

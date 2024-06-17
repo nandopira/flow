@@ -98,12 +98,12 @@ Route::get('/login', function () {
 //Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 //Route::get('/auth/google/callback', [AuthController::class, 'handleGoogleCallback']);
 Route::get('auth/google', [GoogleCalendarController::class, 'redirectToGoogle']);
-//Route::get('auth/google/callback', [GoogleCalendarController::class, 'handleGoogleCallback']);
+Route::get('auth/google/callback', [GoogleCalendarController::class, 'handleGoogleCallback']);
 
 Route::get('/', function () {
-    return view('index');
+    return view('index')->name('index');
 });
 
 Route::get('login/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.login');
-Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback'])->name('google.callback');
+//Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback'])->name('google.callback');
 Route::post('logout', [GoogleAuthController::class, 'logout'])->name('logout');
