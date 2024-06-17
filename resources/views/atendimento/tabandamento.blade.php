@@ -4,7 +4,8 @@
 
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                    <strong>{{ $log->created_at->format('d/m/Y H:i') }}</strong> por {{ $log->createdby }} <br>
+                    <strong>{{ ucfirst(\Carbon\Carbon::parse($log->created_at)->locale('pt_BR')->translatedFormat('l d/m'))  }}
+                    </strong> por {{ $log->createdby }} <br>
                     {{ $log->message }}<br>
                 </div>
                 <div>

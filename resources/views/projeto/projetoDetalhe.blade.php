@@ -23,32 +23,34 @@
         <div class="ui-state-default ui-corner-top ui-jqgrid-hdiv" style="width: 900px;">
         <div class="container mt-2">
         <div class="row">
-            <div class="col-md-8">
-            <div>
-    <p><strong>Projeto:</strong>{{ $projeto->nome }} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-    <a href="{{ route('engenharia.edit', $projeto->id) }}">Edit</a> </p> 
-</div>
-<div style="display: flex;">
+    <div class="col-md-12 d-flex justify-content-between align-items-center">
+        <p class="mb-0"><strong>Projeto:</strong> {{ $projeto->nome }}</p>
+        <a href="{{ route('engenharia.edit', $projeto->id) }}">
+            <button class="btn btn-success">Editar</button>
+        </a>
+    </div>
+<br> 
+<div style="display: flex;" class="container mt-2">
     <div style="width: 34%;">
         <p><strong>Status:</strong> Em andamento</p>
         <p><strong>Situação:</strong> Licitação Concluída</p>
         <p><strong>Próximo:</strong> Fiscalização</p>
-        <p><strong>Natureza:</strong> Fiscalização</p>
+        <p><strong>Natureza:</strong> Obra</p>
         <p><strong>Recurso Aprovado:</strong> Fiscalização</p>
     </div>
     <div style="width: 33%;"> 
-        <p><strong>Data Inicial Prevista:</strong> Compras</p>
-        <p><strong>Data Final Prevista:</strong> 01/01/2025</p>
-        <p><strong>PCA:</strong> 10/02/2025</p>
-        <p><strong>Origem Recursos:</strong> 10/02/2025</p>
+        <p><strong>Data Inicial Prevista:</strong> 01/01/2025</p>
+        <p><strong>Data Final Prevista:</strong> 11/06/2025</p>
+        <p><strong>PCA:</strong> 2025</p>
+        <p><strong>Origem Recursos:</strong> SEF</p>
         <p><strong>Recurso Total:</strong> Fiscalização</p>
     </div>
     <div style="width: 33%;"> 
-        <p><strong>Data Inicial Ocorrida:</strong> Compras</p>
-        <p><strong>Data Final Ocorrida:</strong> 01/01/2025</p>
-        <p><strong>Ordem PCA:</strong> 10/02/2025</p>
-        <p><strong>Projeto:</strong> propio ou terceirizado </p>
-        <p><strong>Orçamento CODAGE:</strong> Fiscalização</p>
+        <p><strong>Data Inicial Ocorrida:</strong>  01/01/2025</p>
+        <p><strong>Data Final Ocorrida:</strong> 11/06/2025</p>
+        <p><strong>Ordem PCA:</strong> 002</p>
+        <p><strong>Projeto:</strong> Terceirizado </p>
+        <p><strong>Orçamento CODAGE:</strong> Aprovado</p>
     </div>    
 </div>
             </div>

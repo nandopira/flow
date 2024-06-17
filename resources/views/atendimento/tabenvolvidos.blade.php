@@ -15,13 +15,21 @@
 
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                    <strong>{{ $envolvido->nome }}</strong><br>
+                    {{ $envolvido->numeroUSP }} - 
                     {{ $envolvido->tipo }} <br>
                 </div>
                 <div>
-                    <button class="btn btn-success" data-toggle="modal" data-target="#aprovarModal">Editar</button>
+                    <button class="btn btn-success" onclick="confirmRemoval(event)">Remover</button>
                 </div>
             </li>
             
     @endforeach       
         </ul>
+
+        <script>
+        function confirmRemoval(event) {
+            if (!confirm('Você tem certeza que deseja remover este item?')) {
+                event.preventDefault();
+            }
+        }
+    </script>
