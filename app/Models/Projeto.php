@@ -28,6 +28,8 @@ class Projeto extends Model
         'setorResponsavel',
         'descricao',
         'demandante',
+        'fase',
+        'status',
         'dtprevini',
         'dtprevfim',
         'dtini',
